@@ -39,7 +39,7 @@ export class Neskatila {
 
 }
 
-// Definimos la funcion "initNeskatila" que acepta un objeto con las propiedades "apiKey" y "serverURL", las cuales se definen en el metodo init. Esta función se invocara en el archivo "App.jsx" del front-end. 
+// Definimos la funcion "initNeskatila" que acepta un objeto con las propiedades "apiKey" y "serverURL", las cuales se definen en el metodo init. Esta funcion se invocara en el archivo "App.jsx" del front-end. 
 // Al invocar "initNeskatila", establecemos nuestra "apiKey" para poder utilizar "useNeskatila", y especificamos el servidor backend al que nos conectaremos, que puede ser local o estar alojado en Internet. 
 // Si no se proporciona un "serverURL", se usara http://localhost:3000 por defecto.
 
