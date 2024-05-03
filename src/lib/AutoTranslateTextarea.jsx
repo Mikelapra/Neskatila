@@ -3,17 +3,13 @@ import { useNeskatila } from "./useNeskatila";
 import PropTypes from "prop-types";
 
 
-// Este es un componente utiliza el Custom Hook useNeskatila para traducir automaticamente el contenido que haya en un input.
+// Este es un componente que utiliza el Custom Hook "useNeskatila" para traducir automaticamente el contenido que haya en un input mediante onBlur.
 
 
 export const AutoTranslateTextArea = (props) => {
     const { sourceLanguage, targetLanguage } = props;
     const { translate } = useNeskatila();
     const [textAreaValue, setTextAreaValue] = useState('');
-
-
-// Este es un componente que utiliza el Custom Hook "useNeskatila" para traducir automaticamente el contenido que haya en un input mediante onBlur.
-
 
     const handleTranslate = async (event) => {
         try {
