@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { useNeskatila } from "./useNeskatila";
 import PropTypes from "prop-types";
 
-// Este un componente utiliza el Hook useNeskatila para traducir automaticamente el contenido que haya en un input.
+
+// Este es un componente utiliza el Custom Hook useNeskatila para traducir automaticamente el contenido que haya en un input.
+
 
 export const AutoTranslateTextArea = (props) => {
     const { sourceLanguage, targetLanguage } = props;
@@ -10,7 +12,8 @@ export const AutoTranslateTextArea = (props) => {
     const [textAreaValue, setTextAreaValue] = useState('');
 
 
-     // "translate" proporcionado por el Hook useNeskatila para traducir el texto del idioma de origen al idioma de destino.
+// Este es un componente que utiliza el Custom Hook "useNeskatila" para traducir automaticamente el contenido que haya en un input mediante onBlur.
+
 
     const handleTranslate = async (event) => {
         try {
@@ -22,11 +25,15 @@ export const AutoTranslateTextArea = (props) => {
         }
     };
 
+
         // El valor del input se actualiza con "handleChange". Este actualiza el estado "textAreaValue" del texto introducido.
+
 
     const handleChange = async (event) => {
 
-        // El resultado de la traduccion se guarda en el estado textAreaValue, que se muestra en el Input.
+
+        // El resultado de la traduccion se guarda en el estado "textAreaValue", que se muestra en el Input.
+
 
         setTextAreaValue(event.target.value);
     };
@@ -36,8 +43,10 @@ export const AutoTranslateTextArea = (props) => {
     )
 }
 
+
 // PropTypes permite validar las props que se van pasar a los componentes, en este caso AutoTranslatedLabel, ya que esta destinado a ser reutilizados en otros codigos. De esta manera,
 // verificamos si las propiedades cumplen con los valores que queresmos para este componente. Nos sirve como una deteccion temprana de errores al recibir propiedades con valores incorrectos.
+
 
 AutoTranslateTextArea.propTypes = {
     sourceLanguage: PropTypes.string,

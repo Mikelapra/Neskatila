@@ -1,0 +1,28 @@
+Para crear el proyecto de libreria (ya está hecho)
+	npm create vite@latest
+	name: neskatila
+	Framework: React
+	Variant: Javascript
+	cd neskatila
+	npm install 
+	
+Para compilar y publicar el modulo  
+	//build the components and make sure dist folder is created
+	npm run build
+
+	//Make sure you have a npm account before you do this
+	//VS code will prompt to login to you account using the otp send 
+	//to your email id
+	npm login
+
+	//This will publish the package
+	//Make sure the "version": "1.0.1" in the package.json is incremented
+	//before every publish
+	npm publish
+
+Para cambiar el nombre de la libreria de "neskatila" a "neskatila-lib" lo que querais
+	package.json
+		"version": "1.0.3" -> Poner "1.0.0" para resetearla
+	    "name": "neskatila" -> "name": "neskatila-lib"
+
+		
